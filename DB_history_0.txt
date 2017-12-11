@@ -1,0 +1,6 @@
+    1  sudo apt-get update
+    2  sudo apt-get install mysql-server
+    3  sudo apt-get install mysql-client
+ pip install mysql-connector-python
+    4  sudo mysql -uroot -ppassword -e "SET PASSWORD = PASSWORD('password');"
+    4  sudo mysql -uroot -pPASS -e "SET PASSWORD = PASSWORD('password');"

@@ -1,0 +1,11 @@
+    1  sudo apt-get update
+    2  sudo apt-get install mariadb-server
+    3  sudo apt-get install mariadb-client
+    4  sudo mysql -uroot -pPASS -e "SET PASSWORD = PASSWORD('');"
+   25  sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf
+
+CREATE DATABASE customersDB;
+use customersDB;
+select * from web_information;
+
+
