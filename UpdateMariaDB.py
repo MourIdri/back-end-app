@@ -18,15 +18,7 @@ JobRole= sys.argv[7]
 IDObject="1"
 
 
-#IDObject= "1" 
-#CurrentMail= "moidrissi@ms.com" 
-#FirstName= "Mourad" 
-#LastName= "IDRISSI"
-#CurrentCompany= "Microsoft"
-#STRUserUUID1= "c1fbf0fa-db5f-11e7-82d0-000d3a1cfe66"
-#JobRole= "TSP"
-# this is a trick while waiting for user increment
-#IDObject=STRUserUUID1
+
 
 def insert_web_information_fct(web_information_update):
     row1="title"
