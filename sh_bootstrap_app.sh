@@ -9,7 +9,7 @@ pip install requests flask ConfigParser mysql-connector-python flask-restful ast
 pip3 install requests 
 apt-get install php php-fpm php-mysql php-curl php-gd php-pear php-imagick php-imap php-mcrypt php-recode php-tidy php-xmlrpc php-curl php-gd php-intl php-json php-mbstring php-mcrypt php-xml php-zip -y
 
-apt-get remove apache2
+apt-get remove apache2 -y 
 #systemctl enable mariadb.service
 
 export DB_NAME=customersDB
