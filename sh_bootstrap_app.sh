@@ -11,9 +11,10 @@ apt-get install php php-fpm php-mysql php-curl php-gd php-pear php-imagick php-i
 sudo a2enmod cgi
 #systemctl enable mariadb.service
 
-export DB_NAME=root
-export DB_USER=wordpress
+export DB_NAME=customersDB
+export DB_USER=root
 export DB_PWD=password
+
 
 
 #Make dirs
@@ -23,3 +24,4 @@ rm -rf /APP/*
 
 git clone  https://github.com/MourIdri/back-end-app.git
 chmod -R 777 /APP/*
+python app.py 
