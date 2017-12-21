@@ -25,4 +25,5 @@ rm -rf /APP/*
 
 git clone  https://github.com/MourIdri/back-end-app.git
 chmod -R 777 /APP/*
-python /APP/back-end-app/app.py 
+cd /APP/back-end-app/
+python app.py & echo "Script done app has been started as a thread "

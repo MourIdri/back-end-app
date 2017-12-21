@@ -68,6 +68,7 @@ class OPERATIONS(Resource):
             print "FILE SAVED LOCALY"
             #return 'JSON of customer posted'
             command = 'python UpdateMariaDB.py ' + STRUserUUID1 + ' ' + CurrentMail + ' ' + FirstName + ' ' + LastName + ' ' + CurrentCompany + ' ' +  STRUserUUID1 + ' ' +  JobRole
+            print command
             os.system(command)
             print "DB updated with this user %s %s " % (FirstName,LastName)
             #Return has to be specified !! 
