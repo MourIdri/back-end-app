@@ -4,6 +4,7 @@ import sys
 import os 
 from os.path import join, dirname
 from os import environ
+import mysql.connector
 from mysql.connector import MySQLConnection, Error
 from mysql.connector import MySQLConnection, Error
 from python_mysql_dbconfig import read_db_config
@@ -33,7 +34,9 @@ def insert_web_information_fct(web_information_update):
         db_config = read_db_config()
         print "*********************************DEBUG A-1 **********************"        
         conn = MySQLConnection(**db_config)
+        #cnx = mysql.connector.connect(user="demo@mouradmysql", password={M0nP@ssw0rd!}, host="mouradmysql.mysql.database.azure.com", port=3306, database={customersDB})
         print "*********************************DEBUG A-2 **********************"        
+        #cursor = cnx.cursor()
         cursor = conn.cursor()
         print "*********************************DEBUG A-3 **********************"        
         cursor.execute(query1)
@@ -41,6 +44,7 @@ def insert_web_information_fct(web_information_update):
         cursor.executemany(query2, web_information_update)
         print "*********************************DEBUG A-5 **********************"        
         conn.commit()
+        #cnx.commit()
         print "*********************************DEBUG A-6 **********************"        
     except Error as e:
         print "*********************************DEBUG B **********************"        
@@ -49,6 +53,7 @@ def insert_web_information_fct(web_information_update):
         print "*********************************DEBUG C **********************"        
         cursor.close()
         conn.close()
+        #cnx.close()
 
 #web_information_update=[(IDObject,CurrentMail,FirstName,LastName,CurrentCompany,STRUserUUID1,JobRole)]
 web_information_update=[(IDObject, CurrentMail,FirstName,LastName,CurrentCompany,STRUserUUID1,JobRole)]
